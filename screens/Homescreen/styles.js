@@ -1,9 +1,14 @@
 import styled from "styled-components";
+import { Animated } from "react-native";
 
 const Container = styled.View`
   flex: 1;
   background: #181d36;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 `;
+
+const AnimatedContainer = new Animated.createAnimatedComponent(Container);
 
 const PlayButton = styled.View`
   margin-top: 5px;
@@ -29,9 +34,8 @@ const PlayTitle = styled.Text`
 `;
 
 const TitleBar = styled.View`
-  margin-top: 45px;
+  margin-top: 15px;
   align-items: flex-end;
-  width: 100%;
   padding: 0 20px;
 `;
 
@@ -97,16 +101,15 @@ const MovieReleaseDate = styled.Text`
 const CardDetails = styled.View`
   position: absolute;
   bottom: 10px;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   width: 100%;
   height: 50px;
-  /* align-items: center; */
-  /* justify-content: flex-start; */
 `;
 
 export {
   Container,
+  AnimatedContainer,
   PlayButton,
   PlayIcon,
   PlayTitle,

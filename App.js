@@ -1,7 +1,11 @@
 import React from "react";
-import { Text } from "react-native";
+import { Provider } from "./context";
 import HomeScreen from "./screens/Homescreen";
 
 export default function App() {
-  return <HomeScreen />;
+  return (
+    <Provider>
+      <HomeScreen />
+    </Provider>
+  );
 }
