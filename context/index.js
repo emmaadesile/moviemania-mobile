@@ -1,10 +1,10 @@
-import React from "react";
-import { Animated, Dimensions } from "react-native";
+import React from 'react';
+import { Animated, Dimensions } from 'react-native';
 
 const AppContext = React.createContext();
 const Consumer = AppContext.Consumer;
 
-const screenHeight = Dimensions.get("window").height;
+const screenHeight = Dimensions.get('window').height;
 
 class Provider extends React.Component {
   state = {

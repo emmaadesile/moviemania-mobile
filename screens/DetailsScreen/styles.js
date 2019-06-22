@@ -21,6 +21,8 @@ const CastCard = styled.Image``;
 
 const TitleDetails = styled.View``;
 
+const Subtitle = styled.Text``;
+
 export {
   Container,
   Cover,

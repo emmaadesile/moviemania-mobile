@@ -1,8 +1,8 @@
-import React from "react";
-import { TouchableOpacity } from "react-native";
-import { Consumer } from "../../context";
-import MenuItem from "./MenuItem";
-import * as Icon from "@expo/vector-icons";
+import React from 'react';
+import { TouchableOpacity } from 'react-native';
+import { Consumer } from '../../context';
+import MenuItem from './MenuItem';
+import * as Icon from '@expo/vector-icons';
 
 import {
   AnimatedContainer,
@@ -13,20 +13,20 @@ import {
   ProfileName,
   SubTitle,
   IconView
-} from "./styles";
+} from './styles';
 
 const Menu = () => {
   return (
     <Consumer>
       {context => (
-        <AnimatedContainer style={{ top: context.top }}>
+        <AnimatedContainer style={{ left: context.top }}>
           <TouchableOpacity onPress={() => context.actions.closeMenu()}>
             <IconView>
               <Icon.Ionicons name="ios-close" size={40} color="#737373" />
             </IconView>
           </TouchableOpacity>
           <ProfileInfo>
-            <ProfileImage source={require("../../assets/avatar.jpg")} />
+            <ProfileImage source={require('../../assets/avatar.jpg')} />
             <ProfileName>Davincí</ProfileName>
             <SubTitle>Pro Account</SubTitle>
           </ProfileInfo>
@@ -46,23 +46,23 @@ export default Menu;
 
 const menuItems = [
   {
-    title: "Profile",
-    icon: "ios-person"
+    title: 'Profile',
+    icon: 'ios-person'
   },
   {
-    title: "Latest Videos",
-    icon: "ios-play"
+    title: 'Latest Videos',
+    icon: 'ios-play'
   },
   {
-    title: "Bookmarks",
-    icon: "ios-bookmark"
+    title: 'Bookmarks',
+    icon: 'ios-bookmark'
   },
   {
-    title: "Billing",
-    icon: "ios-card"
+    title: 'Billing',
+    icon: 'ios-card'
   },
   {
-    title: "Logout",
-    icon: "ios-exit"
+    title: 'Logout',
+    icon: 'ios-exit'
   }
 ];
