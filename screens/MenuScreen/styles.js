@@ -1,5 +1,5 @@
-import { Animated } from "react-native";
-import styled from "styled-components";
+import { Animated } from 'react-native';
+import styled from 'styled-components';
 
 const Container = styled.View`
   background: #181d36;
@@ -20,33 +20,36 @@ const Divider = styled.View`
 `;
 
 const IconView = styled.View`
-  width: 35px;
-  height: 35px;
-  max-width: 100%;
-  position: absolute;
-  right: 4px;
+  width: 40px;
+  height: 40px;
   align-items: center;
   justify-content: center;
-  padding: 0 10px;
 `;
 
 const Content = styled.View`
   width: 100%;
   align-items: flex-start;
-  padding: 50px 30px;
+  padding: 50px 40px;
+`;
+
+const Header = styled.View`
+  margin-top: 50px;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 310px;
 `;
 
 const ProfileInfo = styled.View`
-  margin-top: 20px;
-  padding: 20px 0;
-  justify-content: space-between;
-  align-items: center;
+  padding: 10px 0 20px 0;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 40px;
 `;
 
 const ProfileImage = styled.Image`
-  width: 46px;
-  height: 46px;
-  border-radius: 23px;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
   margin-bottom: 10px;
 `;
 
@@ -59,6 +62,7 @@ const ProfileName = styled.Text`
 const SubTitle = styled.Text`
   font-size: 15px;
   color: #959dc3;
+  margin-top: 5px;
 `;
 
 export {
@@ -69,5 +73,6 @@ export {
   ProfileImage,
   ProfileName,
   SubTitle,
-  IconView
+  IconView,
+  Header
 };

@@ -1,30 +1,30 @@
 Arguments: 
-  /usr/local/Cellar/node/10.8.0/bin/node /usr/local/Cellar/yarn/1.9.4/libexec/bin/yarn.js add react-navogation
+  /usr/local/lib/node_modules/node/bin/node /usr/local/Cellar/yarn/1.9.4/libexec/bin/yarn.js add expo-client-gradient
 
 PATH: 
-  /Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/mysql/bin:/usr/local/mysql/bin
+  /Users/emmanueladesile/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin
 
 Yarn version: 
   1.9.4
 
 Node version: 
-  10.8.0
+  12.5.0
 
 Platform: 
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/react-navogation: Not found
+  Error: https://registry.yarnpkg.com/expo-client-gradient: Not found
       at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:64202:18)
       at Request.self.callback (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:137468:22)
-      at Request.emit (events.js:182:13)
+      at Request.emit (events.js:200:13)
       at Request.<anonymous> (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:138440:10)
-      at Request.emit (events.js:182:13)
+      at Request.emit (events.js:200:13)
       at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:138362:12)
-      at Object.onceWrapper (events.js:273:13)
-      at IncomingMessage.emit (events.js:187:15)
-      at endReadableNT (_stream_readable.js:1081:12)
-      at process._tickCallback (internal/process/next_tick.js:63:19)
+      at Object.onceWrapper (events.js:288:20)
+      at IncomingMessage.emit (events.js:205:15)
+      at endReadableNT (_stream_readable.js:1154:12)
+      at processTicksAndRejections (internal/process/task_queues.js:74:11)
 
 npm manifest: 
   {
@@ -38,12 +38,15 @@ npm manifest:
     },
     "dependencies": {
       "@expo/vector-icons": "^10.0.0",
+      "axios": "^0.19.0",
+      "date-fns": "^1.30.1",
       "expo": "^33.0.0",
       "react": "16.8.3",
       "react-dom": "^16.8.6",
       "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
       "react-native-svg": "^9.5.1",
       "react-native-web": "^0.11.4",
+      "react-navigation": "^3.11.0",
       "styled-components": "^4.3.1"
     },
     "devDependencies": {
@@ -870,6 +873,23 @@ Lockfile:
     version "2.0.10"
     resolved "https://registry.yarnpkg.com/@react-native-community/netinfo/-/netinfo-2.0.10.tgz#d28a446352e75754b78509557988359133cdbcca"
   
+  "@react-navigation/core@~3.4.1":
+    version "3.4.2"
+    resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-3.4.2.tgz#bec563e94fde40fbab3730cdc97f22afbb2a1498"
+    dependencies:
+      hoist-non-react-statics "^3.3.0"
+      path-to-regexp "^1.7.0"
+      query-string "^6.4.2"
+      react-is "^16.8.6"
+  
+  "@react-navigation/native@~3.5.0":
+    version "3.5.0"
+    resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-3.5.0.tgz#f5d16e0845ac26d1147d1caa481f18a00740e7ae"
+    dependencies:
+      hoist-non-react-statics "^3.0.1"
+      react-native-safe-area-view "^0.14.1"
+      react-native-screens "^1.0.0 || ^1.0.0-alpha"
+  
   "@types/fbemitter@^2.0.32":
     version "2.0.32"
     resolved "https://registry.yarnpkg.com/@types/fbemitter/-/fbemitter-2.0.32.tgz#8ed204da0f54e9c8eaec31b1eec91e25132d082c"
@@ -1136,6 +1156,13 @@ Lockfile:
   atob@^2.1.1:
     version "2.1.2"
     resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
+  
+  axios@^0.19.0:
+    version "0.19.0"
+    resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.0.tgz#8e09bff3d9122e133f7b8101c8fbdd00ed3d2ab8"
+    dependencies:
+      follow-redirects "1.5.10"
+      is-buffer "^2.0.2"
   
   axobject-query@^2.0.2:
     version "2.0.2"
@@ -1659,6 +1686,10 @@ Lockfile:
     version "1.0.5"
     resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.5.tgz#780cf7144eb2e8dbd1c3bb83ae31100ccc31a414"
   
+  date-fns@^1.30.1:
+    version "1.30.1"
+    resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.30.1.tgz#2e71bf0b119153dbb4cc4e88d9ea5acfb50dc05c"
+  
   debounce@^1.2.0:
     version "1.2.0"
     resolved "https://registry.yarnpkg.com/debounce/-/debounce-1.2.0.tgz#44a540abc0ea9943018dc0eaa95cce87f65cd131"
@@ -1666,6 +1697,12 @@ Lockfile:
   debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8, debug@^2.6.9:
     version "2.6.9"
     resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
+    dependencies:
+      ms "2.0.0"
+  
+  debug@=3.1.0:
+    version "3.1.0"
+    resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
     dependencies:
       ms "2.0.0"
   
@@ -2669,6 +2706,12 @@ Lockfile:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.0.tgz#55122b6536ea496b4b44893ee2608141d10d9916"
   
+  follow-redirects@1.5.10:
+    version "1.5.10"
+    resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
+    dependencies:
+      debug "=3.1.0"
+  
   fontfaceobserver@^2.1.0:
     version "2.1.0"
     resolved "https://registry.yarnpkg.com/fontfaceobserver/-/fontfaceobserver-2.1.0.tgz#e2705d293e2c585a6531c2a722905657317a2991"
@@ -2873,9 +2916,15 @@ Lockfile:
     dependencies:
       function-bind "^1.1.1"
   
-  hoist-non-react-statics@^2.3.1:
+  hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
     version "2.5.5"
     resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
+  
+  hoist-non-react-statics@^3.0.1, hoist-non-react-statics@^3.3.0:
+    version "3.3.0"
+    resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
+    dependencies:
+      react-is "^16.7.0"
   
   hosted-git-info@^2.1.4:
     version "2.7.1"
@@ -3025,6 +3074,10 @@ Lockfile:
     version "1.1.6"
     resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   
+  is-buffer@^2.0.2:
+    version "2.0.3"
+    resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-2.0.3.tgz#4ecf3fcf749cbd1e472689e109ac66261a25e725"
+  
   is-callable@^1.1.4:
     version "1.1.4"
     resolved "https://registry.yarnpkg.com/is-callable/-/is-callable-1.1.4.tgz#1e1adf219e1eeb684d691f9d6a05ff0d30a24d75"
@@ -3170,6 +3223,10 @@ Lockfile:
   is-wsl@^1.1.0:
     version "1.1.0"
     resolved "https://registry.yarnpkg.com/is-wsl/-/is-wsl-1.1.0.tgz#1f16e4aa22b04d1336b66188a66af3c600c3a66d"
+  
+  isarray@0.0.1:
+    version "0.0.1"
+    resolved "https://registry.yarnpkg.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
   
   isarray@1.0.0, isarray@^1.0.0, isarray@~1.0.0:
     version "1.0.0"
@@ -4245,6 +4302,12 @@ Lockfile:
     version "1.0.6"
     resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
   
+  path-to-regexp@^1.7.0:
+    version "1.7.0"
+    resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-1.7.0.tgz#59fde0f435badacba103a84e9d3bc64e96b9937d"
+    dependencies:
+      isarray "0.0.1"
+  
   path-type@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/path-type/-/path-type-2.0.0.tgz#f012ccb8415b7096fc2daa1054c3d72389594c73"
@@ -4402,6 +4465,14 @@ Lockfile:
       split-on-first "^1.0.0"
       strict-uri-encode "^2.0.0"
   
+  query-string@^6.4.2:
+    version "6.8.0"
+    resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.8.0.tgz#08be5c20ea6657150bacaa6bd9829cfa8e546dc2"
+    dependencies:
+      decode-uri-component "^0.2.0"
+      split-on-first "^1.0.0"
+      strict-uri-encode "^2.0.0"
+  
   querystringify@^2.1.1:
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
@@ -4467,9 +4538,13 @@ Lockfile:
       scriptjs "^2.5.8"
       warning "^3.0.0"
   
-  react-is@^16.6.0, react-is@^16.8.1:
+  react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.6:
     version "16.8.6"
     resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
+  
+  react-lifecycles-compat@^3.0.4:
+    version "3.0.4"
+    resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   
   react-native-branch@2.2.5:
     version "2.2.5"
@@ -4491,13 +4566,19 @@ Lockfile:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.0.1.tgz#5ecb6a2f6dad0351077ac9b771ca943b7ad6feda"
   
+  react-native-safe-area-view@^0.14.1:
+    version "0.14.5"
+    resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.14.5.tgz#eeded66bbeb0807f0a7f5f449e7fb2871f7ecf76"
+    dependencies:
+      hoist-non-react-statics "^2.3.1"
+  
   react-native-safe-module@^1.1.0:
     version "1.2.0"
     resolved "https://registry.yarnpkg.com/react-native-safe-module/-/react-native-safe-module-1.2.0.tgz#a23824ca24edc2901913694a76646475113d570d"
     dependencies:
       dedent "^0.6.0"
   
-  react-native-screens@1.0.0-alpha.22:
+  react-native-screens@1.0.0-alpha.22, "react-native-screens@^1.0.0 || ^1.0.0-alpha":
     version "1.0.0-alpha.22"
     resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-1.0.0-alpha.22.tgz#7a120377b52aa9bbb94d0b8541a014026be9289b"
   
@@ -4508,6 +4589,12 @@ Lockfile:
   react-native-svg@^9.5.1:
     version "9.5.1"
     resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-9.5.1.tgz#eb21fa7eb5d71649620541e6549c6ed425d80240"
+  
+  react-native-tab-view@^1.2.0, react-native-tab-view@^1.4.1:
+    version "1.4.1"
+    resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-1.4.1.tgz#f113cd87485808f0c991abec937f70fa380478b9"
+    dependencies:
+      prop-types "^15.6.1"
   
   react-native-view-shot@2.6.0:
     version "2.6.0"
@@ -4589,6 +4676,35 @@ Lockfile:
       ws "^1.1.5"
       xmldoc "^0.4.0"
       yargs "^9.0.0"
+  
+  react-navigation-drawer@~1.2.1:
+    version "1.2.1"
+    resolved "https://registry.yarnpkg.com/react-navigation-drawer/-/react-navigation-drawer-1.2.1.tgz#7bd5efeee7d2f611d3ebb0933e0c8e8eb7cafe52"
+    dependencies:
+      react-native-tab-view "^1.2.0"
+  
+  react-navigation-stack@~1.4.0:
+    version "1.4.0"
+    resolved "https://registry.yarnpkg.com/react-navigation-stack/-/react-navigation-stack-1.4.0.tgz#69cdb029ea4ee5877d7e933b3117dc90bc841eb2"
+  
+  react-navigation-tabs@~1.1.4:
+    version "1.1.4"
+    resolved "https://registry.yarnpkg.com/react-navigation-tabs/-/react-navigation-tabs-1.1.4.tgz#00a312250df3c519c60b7815a523ace5ee11163a"
+    dependencies:
+      hoist-non-react-statics "^2.5.0"
+      prop-types "^15.6.1"
+      react-lifecycles-compat "^3.0.4"
+      react-native-tab-view "^1.4.1"
+  
+  react-navigation@^3.11.0:
+    version "3.11.0"
+    resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-3.11.0.tgz#2c82217c452d07d8b9b0929bc7e77e2bcfaf9388"
+    dependencies:
+      "@react-navigation/core" "~3.4.1"
+      "@react-navigation/native" "~3.5.0"
+      react-navigation-drawer "~1.2.1"
+      react-navigation-stack "~1.4.0"
+      react-navigation-tabs "~1.1.4"
   
   react-proxy@^1.1.7:
     version "1.1.8"

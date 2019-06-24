@@ -20,12 +20,7 @@ import {
   Title,
   MovieContainer,
   MovieImage,
-  GenericTitle,
-  MovieCard,
-  MovieCardImage,
-  MovieCardTitle,
-  MovieReleaseDate,
-  CardDetails
+  GenericTitle
 } from './styles';
 
 class HomeScreen extends React.Component {
@@ -39,109 +34,113 @@ class HomeScreen extends React.Component {
     return (
       <Consumer>
         {context => (
-          <AnimatedContainer>
+          <>
             <MenuScreen />
-            <SafeAreaView>
-              <ScrollView>
-                <TitleBar>
-                  <TouchableOpacity onPress={() => context.actions.openMenu()}>
-                    <MenuIcon
-                      width={30}
-                      height={30}
-                      style={{ fill: '#737373' }}
-                    />
-                  </TouchableOpacity>
-                </TitleBar>
-                <MovieContainer>
-                  <MovieImage
-                    source={require('../../assets/captain_marvel.jpg')}
-                  />
-                  <Title>
-                    <GenericTitle>Captain Marvel</GenericTitle>
-                    <TouchableOpacity>
-                      <PlayButton>
-                        <PlayTitle>Play</PlayTitle>
-                        <PlayIcon>
-                          <Icon.Ionicons
-                            name="ios-play"
-                            size={20}
-                            color="white"
-                          />
-                        </PlayIcon>
-                      </PlayButton>
-                    </TouchableOpacity>
-                  </Title>
-                </MovieContainer>
-                <GenericTitle
-                  size={20}
-                  style={{
-                    marginLeft: 20,
-                    marginTop: 33
-                  }}
-                >
-                  Movies
-                </GenericTitle>
-                <ScrollView
-                  horizontal={true}
-                  showsHorizontalScrollIndicator={false}
-                  style={{
-                    paddingLeft: 20,
-                    marginTop: 15
-                  }}
-                >
-                  {cards.map((card, index) => (
+            <AnimatedContainer style={{ opacity: context.opacity }}>
+              <SafeAreaView>
+                <ScrollView>
+                  <TitleBar>
                     <TouchableOpacity
-                      key={index}
-                      onPress={() => {
-                        this.props.navigation.push('Details', {
-                          details: card
-                        });
-                      }}
+                      onPress={() => context.actions.openMenu()}
                     >
-                      <Card
-                        image={card.image}
-                        title={card.title}
-                        releaseDate={card.releaseDate}
-                        content={card.content}
-                        runningTime={card.runningTime}
-                        rating={card.rating}
+                      <MenuIcon
+                        width={25}
+                        height={25}
+                        style={{ fill: '#737373' }}
                       />
                     </TouchableOpacity>
-                  ))}
+                  </TitleBar>
+                  <MovieContainer>
+                    <MovieImage
+                      source={require('../../assets/captain_marvel.jpg')}
+                    />
+                    <Title>
+                      <GenericTitle>Captain Marvel</GenericTitle>
+                      <TouchableOpacity>
+                        <PlayButton>
+                          <PlayTitle>Play</PlayTitle>
+                          <PlayIcon>
+                            <Icon.Ionicons
+                              name="ios-play"
+                              size={20}
+                              color="white"
+                            />
+                          </PlayIcon>
+                        </PlayButton>
+                      </TouchableOpacity>
+                    </Title>
+                  </MovieContainer>
+                  <GenericTitle
+                    size={20}
+                    style={{
+                      marginLeft: 20,
+                      marginTop: 33
+                    }}
+                  >
+                    Movies
+                  </GenericTitle>
+                  <ScrollView
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    style={{
+                      paddingLeft: 20,
+                      marginTop: 15
+                    }}
+                  >
+                    {cards.map((card, index) => (
+                      <TouchableOpacity
+                        key={index}
+                        onPress={() => {
+                          this.props.navigation.push('Details', {
+                            details: card
+                          });
+                        }}
+                      >
+                        <Card
+                          image={card.image}
+                          title={card.title}
+                          releaseDate={card.releaseDate}
+                          content={card.content}
+                          runningTime={card.runningTime}
+                          rating={card.rating}
+                        />
+                      </TouchableOpacity>
+                    ))}
+                  </ScrollView>
+                  <GenericTitle
+                    size={20}
+                    style={{
+                      marginLeft: 20,
+                      marginTop: 33
+                    }}
+                  >
+                    TV Shows
+                  </GenericTitle>
+                  <ScrollView
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    style={{
+                      paddingLeft: 20,
+                      marginTop: 15
+                    }}
+                  >
+                    {tvShows.map((card, index) => (
+                      <TouchableOpacity key={index} onPress={() => null}>
+                        <Card
+                          image={card.image}
+                          title={card.title}
+                          releaseDate={card.releaseDate}
+                          content={card.content}
+                          runningTime={card.runningTime}
+                          rating={card.rating}
+                        />
+                      </TouchableOpacity>
+                    ))}
+                  </ScrollView>
                 </ScrollView>
-                <GenericTitle
-                  size={20}
-                  style={{
-                    marginLeft: 20,
-                    marginTop: 33
-                  }}
-                >
-                  TV Shows
-                </GenericTitle>
-                <ScrollView
-                  horizontal={true}
-                  showsHorizontalScrollIndicator={false}
-                  style={{
-                    paddingLeft: 20,
-                    marginTop: 15
-                  }}
-                >
-                  {tvShows.map((card, index) => (
-                    <TouchableOpacity key={index} onPress={() => null}>
-                      <Card
-                        image={card.image}
-                        title={card.title}
-                        releaseDate={card.releaseDate}
-                        content={card.content}
-                        runningTime={card.runningTime}
-                        rating={card.rating}
-                      />
-                    </TouchableOpacity>
-                  ))}
-                </ScrollView>
-              </ScrollView>
-            </SafeAreaView>
-          </AnimatedContainer>
+              </SafeAreaView>
+            </AnimatedContainer>
+          </>
         )}
       </Consumer>
     );

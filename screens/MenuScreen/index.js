@@ -1,9 +1,8 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
+import * as Icon from '@expo/vector-icons';
 import { Consumer } from '../../context';
 import MenuItem from './MenuItem';
-import * as Icon from '@expo/vector-icons';
-
 import {
   AnimatedContainer,
   Divider,
@@ -12,24 +11,27 @@ import {
   ProfileImage,
   ProfileName,
   SubTitle,
-  IconView
+  IconView,
+  Header
 } from './styles';
 
 const Menu = () => {
   return (
     <Consumer>
       {context => (
-        <AnimatedContainer style={{ left: context.top }}>
-          <TouchableOpacity onPress={() => context.actions.closeMenu()}>
-            <IconView>
-              <Icon.Ionicons name="ios-close" size={40} color="#737373" />
-            </IconView>
-          </TouchableOpacity>
-          <ProfileInfo>
-            <ProfileImage source={require('../../assets/avatar.jpg')} />
-            <ProfileName>Davincí</ProfileName>
-            <SubTitle>Pro Account</SubTitle>
-          </ProfileInfo>
+        <AnimatedContainer style={{ left: context.left }}>
+          <Header>
+            <ProfileInfo>
+              <ProfileImage source={require('../../assets/avatar.jpg')} />
+              <ProfileName>Emmanuel Adesile</ProfileName>
+              <SubTitle>Developer</SubTitle>
+            </ProfileInfo>
+            <TouchableOpacity onPress={() => context.actions.closeMenu()}>
+              <IconView>
+                <Icon.Ionicons name="ios-close" size={40} color="#737373" />
+              </IconView>
+            </TouchableOpacity>
+          </Header>
           <Divider />
           <Content>
             {menuItems.map((item, index) => (
